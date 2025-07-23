@@ -1,7 +1,7 @@
 #!/usr/bin/awk -f
 
 BEGIN {
-	FS=OFS=", "
+	FS = OFS = ", "
 }
 
 {
@@ -12,6 +12,7 @@ BEGIN {
 			$1 = "x"
 			$3 = "unreleased"
 		}
+		$NF = $NF " +"
 		print
 	}
 }
